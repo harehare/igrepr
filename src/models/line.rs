@@ -66,7 +66,7 @@ impl Line {
             line_no: self.line_no,
             text: self.text.clone(),
             matches: self.matches.clone(),
-            filtered: filtered,
+            filtered,
         }
     }
 

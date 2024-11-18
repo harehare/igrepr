@@ -156,7 +156,7 @@ impl Cli {
 
         let has_stdin = stdin.is_some();
         let conditions: Result<Vec<SearchCondition>> =
-            self.query.as_ref().map(|s| parse(&s)).unwrap_or(Ok(vec![]));
+            self.query.as_ref().map(|s| parse(s)).unwrap_or(Ok(vec![]));
         let mut app = match conditions {
             Ok(c) => App::new(
                 SearchConfig {
