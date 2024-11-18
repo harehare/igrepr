@@ -23,7 +23,7 @@ strum = {version = "0.26.3", features = ["derive"]}
 strum_macros = "0.26.4"
 syntect = "5.2.0"
 syntect-tui = "3.0.5"
-tui-input = "0.9.0"
+tui-input = "0.11.0"
 
 [dev-dependencies]
 rstest = "0.21.0"
