@@ -1,0 +1,20 @@
+name: test
+on:
+  push:
+    branches:
+      - main
+    pull_request:
+      branches:
+        - main
+
+jobs:
+  test:
+    if: "github.actor != 'dependabot[bot]' && !contains(github.event.head_commit.message, 'skip ci')"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: taiki-e/install-action@cargo-llvm-cov
+      - uses: dtolnay/rust-toolchain@stable
+      - run: rustup component add clippy
+      - run: cargo clippy -- -D warnings
+      - run: cargo test
