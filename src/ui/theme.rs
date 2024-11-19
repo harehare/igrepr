@@ -1,7 +1,7 @@
 use ratatui::style::{Color, Modifier, Style};
 
 pub trait Theme {
-    fn foreround_style(&self) -> Style;
+    fn foreground_style(&self) -> Style;
     fn file_style(&self) -> Style;
     fn line_style(&self) -> Style;
     fn line_no_style(&self) -> Style;
@@ -25,7 +25,7 @@ pub trait Theme {
 pub struct Dark;
 
 impl Theme for Dark {
-    fn foreround_style(&self) -> Style {
+    fn foreground_style(&self) -> Style {
         Style::default().fg(Color::White)
     }
 
@@ -117,7 +117,7 @@ impl Theme for Dark {
 pub struct Light;
 
 impl Theme for Light {
-    fn foreround_style(&self) -> Style {
+    fn foreground_style(&self) -> Style {
         Style::default().fg(Color::Black)
     }
 
