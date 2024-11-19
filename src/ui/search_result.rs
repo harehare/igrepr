@@ -339,7 +339,7 @@ impl SearchResult {
                 }
                 Row::Separator => Some(ListItem::new(Line::from(vec![Span::styled(
                     self.config.context_separator.clone(),
-                    theme.foreround_style(),
+                    theme.foreground_style(),
                 )]))),
             })
             .collect::<Vec<_>>();
@@ -347,7 +347,7 @@ impl SearchResult {
         if list_items.is_empty() {
             f.render_widget(
                 Paragraph::new("Not Found")
-                    .style(theme.foreround_style())
+                    .style(theme.foreground_style())
                     .block(Block::default().padding(Padding::top(2)))
                     .centered(),
                 area,
@@ -358,7 +358,7 @@ impl SearchResult {
                 .block(
                     Block::bordered()
                         .title("Search Result")
-                        .title_style(theme.foreround_style()),
+                        .title_style(theme.foreground_style()),
                 );
             f.render_stateful_widget(list, area, &mut self.state);
         }

@@ -143,7 +143,7 @@ impl<'a> App<'a> {
                     }
                 } else {
                     let message = Paragraph::new("Please enter search keywords")
-                        .style(self.theme.foreround_style())
+                        .style(self.theme.foreground_style())
                         .block(Block::default().padding(Padding::top(2)))
                         .centered();
                     f.render_widget(message, list_area);

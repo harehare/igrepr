@@ -46,7 +46,7 @@ impl Input {
             InputState::Input(Ok(_)) => {
                 let input = Paragraph::new(self.input.value())
                     .block(Block::default().padding(Padding::new(1, 0, 1, 1)))
-                    .style(theme.foreround_style());
+                    .style(theme.foreground_style());
                 f.render_widget(input, area);
                 f.set_cursor_position((
                     area.x + (self.input.visual_cursor()) as u16 + 1,
@@ -62,7 +62,7 @@ impl Input {
                     .ok();
                 let input = Paragraph::new(self.input.value())
                     .block(Block::default().padding(Padding::new(0, 0, 1, 1)))
-                    .style(theme.foreround_style());
+                    .style(theme.foreground_style());
                 f.render_widget(input, area);
                 f.set_cursor_position((
                     area.x + (self.input.visual_cursor()) as u16 + 1,

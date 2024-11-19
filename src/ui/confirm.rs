@@ -63,7 +63,7 @@ impl Confirm {
         .areas(buttons_area);
         let description = Paragraph::new(self.text.as_str())
             .block(Block::new().padding(Padding::new(2, 2, 2, 2)))
-            .style(theme.foreround_style());
+            .style(theme.foreground_style());
         let block = Block::bordered()
             .title(self.title.as_str())
             .style(theme.popup_style());

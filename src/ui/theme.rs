@@ -31,7 +31,7 @@ impl Theme for Dark {
 
     fn file_style(&self) -> Style {
         Style::default()
-            .fg(Color::Yellow)
+            .fg(Color::Magenta)
             .add_modifier(Modifier::BOLD)
     }
 
@@ -123,7 +123,7 @@ impl Theme for Light {
 
     fn file_style(&self) -> Style {
         Style::default()
-            .fg(Color::Yellow)
+            .fg(Color::Magenta)
             .add_modifier(Modifier::BOLD)
     }
 

@@ -98,7 +98,7 @@ impl InputList {
             area,
         );
         f.render_widget(
-            Paragraph::new(Span::styled(icon.search(), theme.foreround_style()))
+            Paragraph::new(Span::styled(icon.search(), theme.foreground_style()))
                 .block(Block::default().padding(Padding::new(1, 0, 1, 1))),
             icon_rect,
         );

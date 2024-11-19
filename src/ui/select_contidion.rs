@@ -56,7 +56,7 @@ impl SelectCondition {
 
         let input = Paragraph::new(self.input.value())
             .block(Block::bordered().border_style(theme.border_style()))
-            .style(theme.foreround_style());
+            .style(theme.foreground_style());
 
         self.filtered_conditions = self
             .conditions
@@ -84,7 +84,7 @@ impl SelectCondition {
             f.render_widget(
                 Paragraph::new("Not found")
                     .block(Block::default().padding(Padding::new(1, 1, 0, 0)))
-                    .style(theme.foreround_style()),
+                    .style(theme.foreground_style()),
                 list_area,
             );
         } else {
@@ -105,7 +105,7 @@ impl SelectCondition {
                     } else if condition.is_transform() {
                         theme.transform_style()
                     } else {
-                        theme.foreround_style()
+                        theme.foreground_style()
                     };
 
                     ListItem::new(Line::from(Span::styled(s, style)))
