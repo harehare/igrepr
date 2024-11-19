@@ -28,7 +28,7 @@ pub enum Editor {
     Nano,
     #[default]
     Vim,
-    VSCode,
+    Vscode,
 }
 
 pub struct EditorCommand {
@@ -68,7 +68,7 @@ impl EditorCommand {
             Editor::Less => "less",
             Editor::Nano => "nano",
             Editor::Neovim => "nvim",
-            Editor::VSCode => "code",
+            Editor::Vscode => "code",
             Editor::Vim => "vim",
             _ => "",
         }
@@ -85,7 +85,7 @@ impl EditorCommand {
             Editor::Less | Editor::Nano | Editor::Neovim | Editor::Vim => {
                 Ok(format!("{} +{line_no} {file_path}", self.command()))
             }
-            Editor::VSCode => Ok(format!("{} -g {file_path}:{line_no}", self.command())),
+            Editor::Vscode => Ok(format!("{} -g {file_path}:{line_no}", self.command())),
             Editor::Github => Ok(format!(
                 "{} https://github.com/{}/{}/blob/{}/{}#L{line_no}",
                 self.config.url_open_command,

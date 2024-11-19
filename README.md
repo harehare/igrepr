@@ -49,7 +49,7 @@ Options:
   -d, --disable-tui
           Disable tui
       --editor <EDITOR>
-          Text editor used to open selected line [default: vim] [possible values: github, emacs, intellij, less, neovim, nano, vim, vs-code]
+          Text editor used to open selected line [default: vim] [possible values: github, emacs, intellij, less, neovim, nano, vim, vscode]
   -., --hidden
           Search hidden files and directory
       --hide-help
