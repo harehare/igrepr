@@ -1,6 +1,6 @@
 use super::Theme;
 use crate::{models, ui};
-use crossterm::event::{Event, KeyCode, KeyEvent};
+use ratatui::crossterm::event::{Event, KeyCode, KeyEvent};
 use ratatui::{
     layout::Rect,
     widgets::{Block, Padding, Paragraph},

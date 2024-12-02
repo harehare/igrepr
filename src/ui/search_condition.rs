@@ -31,7 +31,7 @@ impl<'a> SearchCondition<'a> {
     }
 }
 
-impl<'a> Display for SearchCondition<'a> {
+impl Display for SearchCondition<'_> {
     fn fmt(&self, f: &mut std::fmt::Formatter) -> std::fmt::Result {
         let s = match &self.condition {
             models::SearchCondition::Exact(s) => format!("{} {}", self.icon.search(), s),

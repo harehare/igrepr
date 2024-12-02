@@ -123,7 +123,11 @@ impl Search {
                             None
                         } else {
                             let before = if let Some(before) = config.before_context {
-                                let start = if index < before { 0 } else { index - before };
+                                let start = if index < before {
+                                    0
+                                } else {
+                                    index.saturating_sub(before)
+                                };
                                 slice[start..index]
                                     .iter()
                                     .enumerate()

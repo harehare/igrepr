@@ -1,7 +1,7 @@
 use super::{Icon, Input, MatchColors, Theme};
 use crate::{models::SearchCondition, ui};
-use crossterm::event::{Event, KeyCode, KeyEvent};
 use itertools::Itertools;
+use ratatui::crossterm::event::{Event, KeyCode, KeyEvent};
 use ratatui::{
     layout::{Constraint, Layout, Rect},
     style::{Modifier, Style},

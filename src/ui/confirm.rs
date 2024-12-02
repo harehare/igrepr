@@ -1,7 +1,7 @@
 use super::Theme;
 use crate::ui;
 use anyhow::Result;
-use crossterm::event::{Event, KeyCode, KeyEvent};
+use ratatui::crossterm::event::{Event, KeyCode, KeyEvent};
 use ratatui::{
     layout::{Constraint, Layout, Rect},
     widgets::{Block, Clear, Padding, Paragraph},

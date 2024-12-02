@@ -1,5 +1,5 @@
 use crate::{models::SearchCondition, ui};
-use crossterm::event::{Event, KeyCode, KeyEvent};
+use ratatui::crossterm::event::{Event, KeyCode, KeyEvent};
 use ratatui::{
     layout::{Constraint, Layout, Rect},
     text::{Line, Span},

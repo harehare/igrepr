@@ -8,7 +8,7 @@ use crate::{
     ui::{self, Confirm, Help, Icon, Input, InputList, SelectCondition, Theme},
 };
 use anyhow::{anyhow, Result};
-use crossterm::event::{self, Event, KeyCode, KeyEvent, KeyModifiers};
+use ratatui::crossterm::event::{self, Event, KeyCode, KeyEvent, KeyModifiers};
 use ratatui::{
     layout::{Alignment, Constraint, Layout, Rect},
     widgets::{Block, Gauge, Padding, Paragraph},

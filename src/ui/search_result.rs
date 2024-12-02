@@ -2,8 +2,8 @@ use super::{MatchColors, Theme};
 use crate::models::file_result::LineResult;
 use crate::models::{self, MatchResult, SearchResultConfig};
 use crate::ui;
-use crossterm::event::{Event, KeyCode, KeyEvent, KeyModifiers};
 use nom::ToUsize;
+use ratatui::crossterm::event::{Event, KeyCode, KeyEvent, KeyModifiers};
 use ratatui::style::{Modifier, Style};
 use ratatui::widgets::{Block, Padding, Paragraph};
 use ratatui::{
