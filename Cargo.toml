@@ -26,4 +26,4 @@ syntect-tui = "3.0.5"
 tui-input = "0.11.1"
 
 [dev-dependencies]
-rstest = "0.21.0"
+rstest = "0.24.0"
